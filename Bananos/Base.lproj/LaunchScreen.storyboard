@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,36 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6Fk-LQ-8X3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banan" translatesAutoresizingMaskIntoConstraints="NO" id="7ZT-Wg-i5z">
+                                <rect key="frame" x="107" y="298" width="200" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANANOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xj-EK-Oos">
+                                <rect key="frame" x="0.0" y="513" width="414" height="64"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.78189939259999997" blue="0.2587737739" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Fk-LQ-8X3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="5uc-65-m9W"/>
+                            <constraint firstAttribute="trailing" secondItem="6Fk-LQ-8X3" secondAttribute="trailing" id="705-uu-qUU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7xj-EK-Oos" secondAttribute="trailing" id="MBN-ve-66C"/>
+                            <constraint firstItem="7ZT-Wg-i5z" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="OYR-Bn-Z0p"/>
+                            <constraint firstItem="7ZT-Wg-i5z" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WqG-DM-EvN"/>
+                            <constraint firstItem="6Fk-LQ-8X3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aKW-Dr-TA4"/>
+                            <constraint firstItem="6Fk-LQ-8X3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="bXz-u1-ZKF"/>
+                            <constraint firstAttribute="bottom" secondItem="6Fk-LQ-8X3" secondAttribute="bottom" id="dtO-eJ-jOr"/>
+                            <constraint firstItem="6Fk-LQ-8X3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="oTj-2e-PWF"/>
+                            <constraint firstItem="7xj-EK-Oos" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pTi-nJ-1hU"/>
+                            <constraint firstItem="7xj-EK-Oos" firstAttribute="top" secondItem="7ZT-Wg-i5z" secondAttribute="bottom" constant="15" id="zDY-O9-I8I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +50,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="612" height="408"/>
+        <image name="banan" width="200" height="200"/>
+    </resources>
 </document>

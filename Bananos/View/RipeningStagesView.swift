@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RipeningStagesView.swift
 //  Bananos
 //
 //  Created by Yauheni Bunas on 5/20/20.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RipeningStagesView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("Ripening Stages")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RipeningStagesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RipeningStagesView()
     }
 }
