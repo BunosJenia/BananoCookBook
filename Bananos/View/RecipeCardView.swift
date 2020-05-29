@@ -11,6 +11,9 @@ import SwiftUI
 struct RecipeCardView: View {
     
     var recipe: Recipe
+    var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
+    
+    @State private var showModal: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -21,11 +24,14 @@ struct RecipeCardView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        Image("bookmark")
-                            .resizable()
-                            .frame(width: 30, height: 30, alignment: .center)
+                        Image(systemName: "bookmark")
+                            .font(Font.title.weight(.light))
+                            .foregroundColor(Color.black)
+                            .imageScale(.small)
+                            .shadow(color: Color("ColorBlackTransparentLight"), radius: 2, x: 0, y: 0)
                             .padding(.trailing, 20)
                             .padding(.top, 22)
+                        
                         Spacer()
                     }
                 }
@@ -39,34 +45,13 @@ struct RecipeCardView: View {
                     .lineLimit(1)
                 
                 Text(recipe.headLine)
-                .font(.system(.body, design: .serif))
-                .fontWeight(.bold)
-                .foregroundColor(Color.bananosYellow())
-                .lineLimit(1)
+                    .font(.system(.body, design: .serif))
+                    .foregroundColor(Color.bananosYellow())
+                    .italic()
                 
-                HStack(alignment: .center, spacing: 12) {
-                    HStack(alignment: .center, spacing: 2) {
-                        Image("person")
-                            .resizable()
-                            .frame(width: 15, height: 15, alignment: .center)
-                        Text("Serves: \(recipe.serves)")
-                    }
-                    HStack(alignment: .center, spacing: 2) {
-                        Image("preparation")
-                            .resizable()
-                            .frame(width: 15, height: 15, alignment: .center)
-                        Text("Preparation: \(recipe.preparation)")
-                    }
-                    HStack(alignment: .center, spacing: 2) {
-                        Image("cooking")
-                            .resizable()
-                            .frame(width: 15, height: 15, alignment: .center)
-                        Text("Cooking: \(recipe.cooking)")
-                    }
-                    
-                }
-                .font(.footnote)
-                .foregroundColor(Color.gray)
+                RecipeRatingView(recipe: recipe)
+
+                CookingInformationView(recipe: recipe)
             }
             .padding()
             .padding(.bottom, 12)
@@ -74,6 +59,13 @@ struct RecipeCardView: View {
         .background(Color.white)
         .cornerRadius(40)
         .shadow(color: Color("ColorBlackTransparentLight"), radius: 8, x: 0, y: 0)
+        .onTapGesture {
+            self.hapticImpact.impactOccurred()
+            self.showModal = true
+        }
+        .sheet(isPresented: self.$showModal) {
+            RecipeDetailsView(recipe: self.recipe)
+        }
     }
 }
 

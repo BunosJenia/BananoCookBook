@@ -25,7 +25,7 @@ let recipesData: [Recipe] = [
         "Place half of the custard into a blender or food processor with the bananas. Puree until smooth, then pour it back into the bowl with the rest of the custard. Stir in the vanilla extract and rum. Cover, pressing a piece of plastic wrap against the surface, then chill thoroughly in the refrigerator for at least 4 hours or, if time allows, overnight.",
         "Freeze the ice cream in your ice cream maker according to the manufacturer’s instructions, adding the chocolate during the last 5 minutes of churning. Transfer the ice cream to an airtight container and freeze 3 hours or overnight. Let stand at room temperature 10 minutes before serving."
         ],
-        ingridients: [
+        ingredients: [
         "2 cups heavy cream",
         "5 large egg yolks ",
         "1 cup whole milk",
@@ -41,7 +41,7 @@ let recipesData: [Recipe] = [
         title: "Banana Pancakes",
         headLine: "Crowd pleasing banana pancakes made from scratch. A fun twist on ordinary pancakes.",
         image: "recipe_pancakes",
-        rating: 5,
+        rating: 4,
         serves: 6,
         preparation: 5,
         cooking: 15,
@@ -50,7 +50,7 @@ let recipesData: [Recipe] = [
         "Stir flour mixture into banana mixture; batter will be slightly lumpy.",
         "Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Cook until pancakes are golden brown on both sides; serve hot."
         ],
-        ingridients: [
+        ingredients: [
         "1 cup all-purpose flour",
         "1 tablespoon white sugar",
         "2 teaspoons baking powder",
@@ -76,7 +76,7 @@ let recipesData: [Recipe] = [
         "Pour the batter into your prepared loaf pan. Bake for 50 minutes to 1 hour at 350°F (175°C), or until a tester inserted into the center comes out clean.",
         "Remove from oven and let cool in the pan for a few minutes. Then remove the banana bread from the pan and let cool completely before serving. Slice and serve. (A bread knife helps to make slices that aren't crumbly.)"
         ],
-        ingridients: [
+        ingredients: [
         "2 to 3 very ripe bananas, peeled (about 1 1/4 to 1 1/2 cups mashed)",
         "1/3 cup melted butter, unsalted or salted",
         "1 teaspoon baking soda",

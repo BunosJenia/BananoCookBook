@@ -89,6 +89,7 @@ struct TitleModifier: ViewModifier {
             .padding(8)
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(headers: headersData, facts: factsData, recipes: recipesData)
